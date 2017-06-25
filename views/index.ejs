@@ -1,0 +1,180 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="UFT-8">
+	<title>Tic Tac Toe</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link href='http://fonts.googleapis.com/css?family=Raleway:400,700' rel='stylesheet'>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<style>
+		html {
+			font-family: 'Raleway', sans-serif;
+			font-weight: 400;
+			font-size: 12px;
+		}
+
+		.container {
+			max-width: 400px;
+			margin: 2em auto;
+			text-align: center;
+			line-height: 1.5;
+		}
+
+		h1 {
+			margin: 1em auto;
+		}
+
+		a {
+			text-decoration: none;
+			color: pink;
+			font-weight: 700;
+		}
+
+		span.red {
+			color: red;
+			font-weight: 700;
+		}
+
+		span.yellow {
+			color: #FFC300;
+			font-weight: 700;
+		}
+		
+		.tic-tac-toe {
+			width: 315px;
+			height: auto;
+			margin: 0 auto;
+			margin-bottom: 5px;
+		}
+		.tile {
+			height: 100px;
+			width: 100px;
+			display: inline-block;
+			cursor: pointer;
+			position: relative;
+			vertical-align: top;
+			padding: 15px;
+			margin-bottom: 5px;
+			box-sizing: border-box;
+			color: #fff;
+			font-size: 60px;
+			text-align: center;
+		}
+
+		.free {
+			background-color: #999;
+		}
+
+		.O-play {
+			background-color: #FFC300;
+		}
+
+		.X-play {
+			background-color: red;
+		}
+
+		.red {
+			color: red;
+			font-weight: 700;
+		}
+
+		.yellow {
+			color: #FFC300;
+			font-weight: 700;
+		}
+
+		input {
+			font-family: "Raleway", sans-serif;
+			outline: 0;
+			background: #f2f2f2;
+			width: 100%;
+			border: 0;
+			margin: 0 0 15px;
+			padding: 15px;
+			box-sizing: border-box;
+			font-size: 14px;
+		}
+
+		.button {
+			font-family: "Raleway", sans-serif;
+			text-transform: uppercase;
+			outline: 0;
+			background: #008080;
+			width: 100%;
+			border: 0;
+			padding-top: 15px;
+			padding-bottom: 15px;
+			color: #FFFFFF;
+			font-size: 14px;
+			-webkit-transition: all 0.3 ease;
+			transition: all 0.3 ease;
+			cursor: pointer;
+		}
+
+		.button:hover,
+		.button:active,
+		.button:focus {
+			background: #20B2AA;
+		}
+	</style>
+</head>
+
+<body>
+	<!--  DIV div-players-input is to fill the players details -->
+	<div class="container" id="div-players-input">
+		<h1>Tic Tac Toe</h1>
+		<p>Welcome to the game of Ttc tac toe.<br/></p>
+		</p>Enter the Players Details: <br/></p>
+		<p><input placeholder="First Player Name" type="text" id="input-player1"><br/></p>
+		<p><input placeholder="Second Player Name" type="text" id="input-player2"><br></p>
+		<div class="button" id="play-button">Lets Play</div>
+	</div>
+
+	<!--  DIV div-tictactoe-play is to play the tic tac toe game -->
+	<div class="container" id="div-tictactoe-play" style="display:none">
+		<div class="container">
+			<h1>Tic Tac Toe</h1>
+		</div>
+
+		<div class="container">
+			<h2>Players</h2>
+			<div class="row">
+				<div class="col s6">
+					<p>
+						<span class='red'>X -</span>
+						<span class='red' id='player1'></span>
+						<span> </span>
+						<span class='yellow'>O - </span>
+						<span class='yellow' id='player2'></span>
+					</p>
+				</div>
+				<div class="col s6">
+					<p>
+						<span>Now Player </span>
+						<span class='red' id='player'></span>
+						<span>Turn</span>
+					</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="tic-tac-toe">
+			<div id="tile1" class="tile free"></div>
+			<div id="tile2" class="tile free"></div>
+			<div id="tile3" class="tile free"></div>
+			<div id="tile4" class="tile free"></div>
+			<div id="tile5" class="tile free"></div>
+			<div id="tile6" class="tile free"></div>
+			<div id="tile7" class="tile free"></div>
+			<div id="tile8" class="tile free"></div>
+			<div id="tile9" class="tile free"></div>
+		</div>
+		<div class="button" id="replay-button" style="display:none">Play Again</div>
+	</div>
+</body>
+<script type="text/javascript" src="/javascripts/index.js"></script>
+
+</html>
